@@ -14,15 +14,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color:gold;
 }
 #nav {
-  padding: 30px;
+  padding: 20px;
+  text-align: left;
   a {
+    
+    padding-right: 5px;
+    font-size: 20px;
     font-weight: bold;
-    color: #2c3e50;
+    color:palevioletred;
     &.router-link-exact-active {
-      color: #42b983;
+      color:darkred;
     }
   }
 }
