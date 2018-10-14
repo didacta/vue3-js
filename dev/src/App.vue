@@ -1,12 +1,23 @@
+
 <template>
+ <v-app id="app">
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+     <v-btn color="error">   <router-link to="/pol">Politics</router-link></v-btn>
+     <v-btn color="error"><router-link to="/econ">EconomyE</router-link></v-btn>
+    <v-btn color="error"><router-link to="/mil">Military</router-link></v-btn>
+      
+    
+      
     </div>
+   
     <router-view/>
+
   </div>
+      </v-app>
 </template>
+
 
 <style lang="scss">
 #app {
