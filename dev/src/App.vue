@@ -1,7 +1,6 @@
 
 <template>
  <v-app id="app">
-  <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
      <v-btn color="error">   <router-link to="/pol">Politics</router-link></v-btn>
@@ -14,18 +13,22 @@
    
     <router-view/>
 
-  </div>
       </v-app>
 </template>
 
 
 <style lang="scss">
+//shapes
+$triangle: polygon(100% 0, 0% 100%, 100% 100%);
+$cirlce:50%;
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color:gold;
+  background:linear-gradient(to top,red, whitesmoke);
 }
 #nav {
   padding: 20px;
