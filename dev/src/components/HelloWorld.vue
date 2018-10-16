@@ -5,6 +5,8 @@
     <div class="cards">
       
      <div class=card>
+              <img alt="Vue logo" src="../../src/assets/logo.png" class="logo">
+
     <h3>Political Life</h3>
   
     <ul>
@@ -28,8 +30,14 @@
     </ul>
  </div>
   <div class=bigcard>  <code>
-    The Roman Empire, at its height (c. 117 CE), was the most extensive political and social structure in western civilization.</code></div>
- <div class=card> <ol>1</ol><ol>2</ol> </div>
+    The Roman Empire, at its height (c. 117 CE), was the most extensive political and social structure in western civilization.</code></div> 
+ <div class=card>       <img alt="Vue logo" src="../../src/assets/logo.png" class="logo"> 
+ <v-alert :value="true" type="warning" outline="true" dismissible="true">Constantinople has fallen </v-alert>
+  <v-alert :value="true" type="error" outline="true" dismissible="true">The Turks are attacking!</v-alert>
+    <v-alert :value="true" type="success" color="#CE8E8E" dismissible="true">You have repaired the city walls</v-alert>
+
+
+ </div>
  
 
     </div>
@@ -63,6 +71,9 @@ export default {
   margin: 15px;
   padding: 15px;
   box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
+   @media only screen and (max-width: 1150px) {
+      display: none;
+    }
 }
 .card {
   flex: 0 1 22%;
@@ -71,9 +82,28 @@ export default {
   margin: 25px;
   padding: 10px;
   box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
+   @media only screen and (max-width: 1150px) {
+      flex: 0 1 44%;
+    }
+       @media only screen and (max-width: 850px) {
+      flex: 0 1 200%;
+    }
 }
+
+.logo {
+        
+    top:50%;
+    left:50%;
+    margin-top: -45px;
+    margin-left: -5px;
+    height: 160px;
+    width: 160px;
+    @media only screen and (max-width: 1150px) {
+      display: none;
+    }
+  }
 h1 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Quattrocento",serif;
 }
 h3 {
   color: plum;

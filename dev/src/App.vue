@@ -2,35 +2,32 @@
 <template>
  <v-app id="app">
     <div id="nav" >
-       <img alt="Vue logo" src="../src/assets/logo.png" class="logo">
-     <v-btn color="pink" > <router-link to="/">Home</router-link></v-btn>
-     <v-btn color="pink">   <router-link to="/pol">Politics</router-link></v-btn>
-     <v-btn color="pink"><router-link to="/econ">Economy</router-link></v-btn>
-    <v-btn color="pink"><router-link to="/mil">Military</router-link></v-btn>
-        <img alt="Vue logo" src="../src/assets/logo.png" class="logo">
-    
-      
-    </div>
-   
+    <v-tabs color="rgb(133, 22, 22)" slider-color="red" grow>
+         <v-tab :key="i" :href="`#tab-${i}`" ripple> Military </v-tab>       
+          <v-tab ripple> Politics </v-tab>       
+         <v-tab ripple> Economy </v-tab>       
+
+         </v-tabs>
+             </div>
     <router-view/>
-
-      </v-app>
+       <v-footer dark absolute="true"></v-footer>
+ </v-app>  
 </template>
-
-
 <style lang="scss">
 //shapes
 $triangle: polygon(100% 0, 0% 100%, 100% 100%);
 $circle: 50%;
 
 #app {
-  $triangle:$triangle;
+  $triangle: $triangle;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: rgb(148, 13, 13);
   color: gold;
+  font-family: "Quattrocento-Bold",serif;
+
 }
 #nav {
   display: flex;
@@ -46,21 +43,14 @@ $circle: 50%;
   );
   margin-bottom: 20px;
   border-radius: 1%;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Quattrocento",serif;
   .logo {
-    display: inherit;
-      flex-wrap: nowrap;
-
-    height: 145px;
-    width: 105px;
-    vertical-align: middle;
-    margin-right: 2px;
     @media only screen and (max-width: 1150px) {
-      display:none;
+      display: none;
     }
   }
   a {
-    width:180px;
+    width: 180px;
     font-size: 18px;
     font-weight: bold;
     color: goldenrod;
@@ -68,7 +58,7 @@ $circle: 50%;
       color: gold;
     }
     @media only screen and (max-width: 1150px) {
-      width:100px;
+      width: 100px;
     }
   }
 }
