@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-    The Roman Empire, at its height (c. 117 CE), was the most extensive political and social structure in western civilization.
+   
+    <div class="cards">
+      
      <div class=card>
     <h3>Political Life</h3>
   
@@ -25,48 +26,71 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">Resources</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Slavery</a></li>
     </ul>
- </div> </div>
+ </div>
+  <div class=bigcard>  <code>
+    The Roman Empire, at its height (c. 117 CE), was the most extensive political and social structure in western civilization.</code></div>
+ <div class=card> <ol>1</ol><ol>2</ol> </div>
+ 
+
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-:root{
-  background-color: rgba(205, 0, 0,1);
+:root {
+  background-color: rgba(205, 0, 0, 1);
 }
-.card{
-    background-color: rgb(155, 63, 63);
-    border:red;
-    width:50%;
-    margin-left: 25%;
-    padding:5px;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.bigcard{
+  flex: 0 1 42%;
+  background-color: rgb(133, 22, 22);
+  width: 50%;
+  border-radius: 2%;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
+}
+.card {
+  flex: 0 1 22%;
+  background-color: rgb(133, 22, 22);
+  border-radius: 2%;
+  margin: 25px;
+  padding: 10px;
+  box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
+}
+h1 {
+  font-family: "Times New Roman", Times, serif;
 }
 h3 {
-  color:plum;
+  color: plum;
   margin: 40px 0 0;
 }
 ul {
-  
-  list-style-type:lower-roman;
   padding: 0;
-  color:royalblue;
+  color: royalblue;
 }
 li {
-  
   display: inline-block;
   margin: 0 10px;
-    
-
 }
 a {
-  color:goldenrod;
+  color: goldenrod;
+}
+ol {
+  list-style-type: upper-roman;
 }
 </style>

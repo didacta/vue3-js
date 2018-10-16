@@ -1,12 +1,13 @@
 
 <template>
  <v-app id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-     <v-btn color="error">   <router-link to="/pol">Politics</router-link></v-btn>
-     <v-btn color="error"><router-link to="/econ">EconomyE</router-link></v-btn>
-    <v-btn color="error"><router-link to="/mil">Military</router-link></v-btn>
-      
+    <div id="nav" >
+       <img alt="Vue logo" src="../src/assets/logo.png" class="logo">
+     <v-btn color="pink" > <router-link to="/">Home</router-link></v-btn>
+     <v-btn color="pink">   <router-link to="/pol">Politics</router-link></v-btn>
+     <v-btn color="pink"><router-link to="/econ">Economy</router-link></v-btn>
+    <v-btn color="pink"><router-link to="/mil">Military</router-link></v-btn>
+        <img alt="Vue logo" src="../src/assets/logo.png" class="logo">
     
       
     </div>
@@ -20,27 +21,54 @@
 <style lang="scss">
 //shapes
 $triangle: polygon(100% 0, 0% 100%, 100% 100%);
-$cirlce:50%;
+$circle: 50%;
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  $triangle:$triangle;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color:gold;
-  background:linear-gradient(to top,red, whitesmoke);
+  background-color: rgb(148, 13, 13);
+  color: gold;
 }
 #nav {
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
   text-align: left;
+  box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(
+    to bottom-right,
+    rgb(133, 22, 22),
+    rgb(216, 37, 37),
+    grey
+  );
+  margin-bottom: 20px;
+  border-radius: 1%;
+  font-family: "Times New Roman", Times, serif;
+  .logo {
+    display: inherit;
+      flex-wrap: nowrap;
+
+    height: 145px;
+    width: 105px;
+    vertical-align: middle;
+    margin-right: 2px;
+    @media only screen and (max-width: 1150px) {
+      display:none;
+    }
+  }
   a {
-    
-    padding-right: 5px;
-    font-size: 20px;
+    width:180px;
+    font-size: 18px;
     font-weight: bold;
-    color:palevioletred;
+    color: goldenrod;
     &.router-link-exact-active {
-      color:darkred;
+      color: gold;
+    }
+    @media only screen and (max-width: 1150px) {
+      width:100px;
     }
   }
 }
