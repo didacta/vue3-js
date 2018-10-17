@@ -6,7 +6,6 @@
          <v-tab :key="i" :href="`#tab-${i}`" ripple> Military </v-tab>       
           <v-tab ripple> Politics </v-tab>       
          <v-tab ripple> Economy </v-tab>       
-
          </v-tabs>
              </div>
     <router-view/>
@@ -29,16 +28,17 @@
   flex-wrap: wrap;
   padding: 10px;
   text-align: left;
+  margin-bottom: 20px;
+  border-radius: 1%;
+  font-family: "Quattrocento", serif;
   box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
   background: linear-gradient(
-    to bottom-right,
+    bottom-right,
     rgb(133, 22, 22),
     rgb(216, 37, 37),
     grey
   );
-  margin-bottom: 20px;
-  border-radius: 1%;
-  font-family: "Quattrocento", serif;
+  
   .logo {
     @media only screen and (max-width: 1150px) {
       display: none;
