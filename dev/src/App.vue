@@ -13,21 +13,16 @@
        <v-footer dark absolute="true"></v-footer>
  </v-app>  
 </template>
-<style lang="scss">
-//shapes
-$triangle: polygon(100% 0, 0% 100%, 100% 100%);
-$circle: 50%;
 
+<style lang="scss">
 #app {
-  $triangle: $triangle;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: rgb(148, 13, 13);
   color: gold;
-  font-family: "Quattrocento-Bold",serif;
-
+  font-family: "Quattrocento-Bold", serif;
 }
 #nav {
   display: flex;
@@ -43,7 +38,7 @@ $circle: 50%;
   );
   margin-bottom: 20px;
   border-radius: 1%;
-  font-family: "Quattrocento",serif;
+  font-family: "Quattrocento", serif;
   .logo {
     @media only screen and (max-width: 1150px) {
       display: none;

@@ -63,7 +63,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.bigcard{
+.bigcard {
   flex: 0 1 42%;
   background-color: rgb(133, 22, 22);
   width: 50%;
@@ -71,9 +71,9 @@ export default {
   margin: 15px;
   padding: 15px;
   box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
-   @media only screen and (max-width: 1150px) {
-      display: none;
-    }
+  @media only screen and (max-width: 1150px) {
+    display: none;
+  }
 }
 .card {
   flex: 0 1 22%;
@@ -82,28 +82,27 @@ export default {
   margin: 25px;
   padding: 10px;
   box-shadow: 10px 5px 18px 0px rgba(0, 0, 0, 0.75);
-   @media only screen and (max-width: 1150px) {
-      flex: 0 1 44%;
-    }
-       @media only screen and (max-width: 850px) {
-      flex: 0 1 200%;
-    }
+  @media only screen and (max-width: 1150px) {
+    flex: 0 1 44%;
+  }
+  @media only screen and (max-width: 850px) {
+    flex: 0 1 200%;
+  }
 }
 
 .logo {
-        
-    top:50%;
-    left:50%;
-    margin-top: -45px;
-    margin-left: -5px;
-    height: 160px;
-    width: 160px;
-    @media only screen and (max-width: 1150px) {
-      display: none;
-    }
+  top: 50%;
+  left: 50%;
+  margin-top: -45px;
+  margin-left: -5px;
+  height: 160px;
+  width: 160px;
+  @media only screen and (max-width: 1150px) {
+    display: none;
   }
+}
 h1 {
-  font-family: "Quattrocento",serif;
+  font-family: "Quattrocento", serif;
 }
 h3 {
   color: plum;
