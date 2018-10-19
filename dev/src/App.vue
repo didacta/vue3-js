@@ -24,14 +24,14 @@
       height="110px"
     >
       <v-card-text absolute=true>
-         <v-card-text class="white--text pt-0">           &copy;2018 — <strong>Igor Yermak</strong>      
+         <v-card-text class="yellow--text pt-0">           &copy;2018 — <strong>Igor Yermak</strong>      
                  <v-divider>
 </v-divider>
       </v-card-text>
         <v-btn
           v-for="icon in icons"
           :key="icon"
-          class="mx-3 white--text"
+          class="mx-3 yellow--text"
           icon
           
         >
@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss">
 :root {
-  background-image: url("https://c1.staticflickr.com/3/2122/2367097282_8e81c2134d_o.jpg");
+  background-image: url("https://images.unsplash.com/photo-1509024644558-2f56ce76c490?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dc2d65e06878d1320a8f986b29bfc6ae&auto=format&fit=crop&w=1500&q=80");
 }
 #app {
   background-size: cover;
@@ -119,6 +119,7 @@ export default {
 }
 
 #footer {
+
   position: fixed;
   left: 0;
   bottom: 0px;
@@ -137,6 +138,7 @@ export default {
 /* #footer .v-footer {
 } */
 #icons .v-icon {
+  color:goldenrod;
   font-size: 24px;
   @media only screen and (max-width: 1050px) {
     font-size: 16px;
