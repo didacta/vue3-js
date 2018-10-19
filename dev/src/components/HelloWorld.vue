@@ -35,9 +35,9 @@
  <div class=card>       <img alt="Vue logo" src="../../src/assets/logo.png" class="logo"> 
  <h2>News</h2><hr style="height:1px;border:none;color:#333;background-color:#333;margin-bottom:20px;">
 
- <v-alert :value="true" type="warning" outline="true" dismissible="true">Constantinople has fallen. </v-alert>
-  <v-alert :value="true" type="error" outline="true" dismissible="true">Barbarians are attacking!</v-alert>
-    <v-alert :value="true" type="success" color="#CE8E8E" dismissible="true">You have repaired the city walls.</v-alert>
+ <v-alert :value=true type=warning outline=true dismissible=true>Constantinople has fallen. </v-alert>
+  <v-alert :value=true type=error outline=true dismissible=true>Barbarians are attacking!</v-alert>
+    <v-alert :value=true type="Success" color="#CE8E8E" dismissible=true>You have repaired the city walls.</v-alert>
 
 
  </div>
@@ -58,16 +58,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-:root {
+/* :root {
 background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');
-}
+} */
 code{
   background-color:rgb(0, 0, 0);
   color:rgb(80, 8, 14);
 }
 v-alert{
     font-family: "Quattrocento", serif;
-
 }
 .cards {
   display: flex;
@@ -77,6 +76,7 @@ v-alert{
 .bigcard {
   flex: 0 1 42%;
   background-color: rgb(133, 22, 22);
+  opacity: .85;
   width: 50%;
   border-radius: 2%;
   margin: 15px;
@@ -89,6 +89,7 @@ v-alert{
 .card {
   flex: 0 1 22%;
   background-color: rgb(133, 22, 22);
+  opacity: .8;
   border-radius: 2%;
   margin: 15px;
   padding: 10px;
