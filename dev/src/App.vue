@@ -21,11 +21,12 @@
       flat
       tile
       color=#7C0A02
-      height="120px"
+      height="110px"
     >
       <v-card-text absolute=true>
          <v-card-text class="white--text pt-0">           &copy;2018 — <strong>Igor Yermak</strong>      
-                 <v-divider></v-divider>
+                 <v-divider>
+</v-divider>
       </v-card-text>
         <v-btn
           v-for="icon in icons"
@@ -38,7 +39,7 @@
           <v-icon>{{ icon }}</v-icon></div>
         </v-btn> 
       </v-card-text>
-    </v-card>   
+    </v-card>  
   </v-footer>
 </div>
  </v-app>  
