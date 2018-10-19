@@ -12,8 +12,8 @@
     <router-view/>
 <div id="footer">
  <v-footer
+    height="110px"
     dark
-    height="80px" 
     color=#7C0A02
     
   >
@@ -21,27 +21,24 @@
       flat
       tile
       color=#7C0A02
-      height="80px"
+      height="120px"
     >
       <v-card-text absolute=true>
+         <v-card-text class="white--text pt-0">           &copy;2018 — <strong>Igor Yermak</strong>      
+                 <v-divider></v-divider>
+      </v-card-text>
         <v-btn
           v-for="icon in icons"
           :key="icon"
           class="mx-3 white--text"
           icon
+          
         >
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
-         <v-card-text class="white--text pt-0">        
+        <div id="icons">
+          <v-icon>{{ icon }}</v-icon></div>
+        </v-btn> 
       </v-card-text>
-
-      </v-card-text>
-
-     
-      <v-divider></v-divider>
-
     </v-card>   
-        &copy;2018 — <strong>Igor Yermak</strong> 
   </v-footer>
 </div>
  </v-app>  
@@ -49,6 +46,15 @@
 </template>
 
 <script>
+import Vue from "vue";
+
+// eslint-disable-next-line
+var vm = new Vue({
+  key: {
+    i: ""
+  },
+  template: "<div>{{ i }}</div>"
+});
 export default {
   data: () => ({
     icons: [
@@ -62,11 +68,13 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
+:root {
   background-image: url("https://c1.staticflickr.com/3/2122/2367097282_8e81c2134d_o.jpg");
+}
+#app {
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(200, 100, 0, 0.5); // Tint color
+  background-color: rgba(165, 43, 22, 0.5); // Tint color
   background-blend-mode: multiply;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -74,6 +82,9 @@ export default {
   text-align: center;
   color: gold;
   font-family: "Quattrocento-Bold", serif;
+  @media only screen and (max-width: 1150px) {
+    background-size: 600px 1150px;
+  }
 }
 #nav {
   display: flex;
@@ -100,17 +111,34 @@ export default {
       color: gold;
     }
     @media only screen and (max-width: 1150px) {
-      width: 140px;
-      font-size: 16px;
+      width: auto;
+      font-size: 14px;
     }
   }
 }
 
 #footer {
   position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    opacity:.6; 
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  opacity: 0.6;
+  @media only screen and (max-width: 1150px) {
+    position: relative;
+    margin-top: auto;
+  }
+  @media only screen and (max-width: 750px) {
+    position: relative;
+    margin-top:10px;
+  }
+}
+
+/* #footer .v-footer {
+} */
+#icons .v-icon {
+  font-size: 24px;
+  @media only screen and (max-width: 1050px) {
+    font-size: 16px;
+  }
 }
 </style>
