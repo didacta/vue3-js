@@ -4,8 +4,8 @@
     <div id="nav" >
     <v-tabs color="black" slider-color="red" grow>
          <v-tab :key="i" :href="`#tab-${i}`" ripple> Home </v-tab>       
-          <v-tab ripple> Maps </v-tab>       
-         <v-tab ripple> Literature </v-tab>       
+          <v-tab ripple :href="`/maps`"> Maps </v-tab>       
+         <v-tab ripple :href="`/lit`"> Literature </v-tab>       
          </v-tabs>
              </div>
              
@@ -119,7 +119,6 @@ export default {
 }
 
 #footer {
-
   position: fixed;
   left: 0;
   bottom: 0px;
@@ -131,14 +130,16 @@ export default {
   }
   @media only screen and (max-width: 750px) {
     position: relative;
-    margin-top:10px;
+    margin-top:5px;
+    margin-bottom:5px;
+    
   }
 }
 
 /* #footer .v-footer {
 } */
 #icons .v-icon {
-  color:goldenrod;
+  color: goldenrod;
   font-size: 24px;
   @media only screen and (max-width: 1050px) {
     font-size: 16px;
